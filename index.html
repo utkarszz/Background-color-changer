@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /*  Base styling for responsive and centered layout */
+    body {
+      background-color: black;
+      color: #00FF00;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5vw;
+      margin-bottom: 20px;
+    }
+
+    #parent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /*  Common button style */
+    button {
+      cursor: pointer;
+      height: 45px;
+      width: 100px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    /*  Individual color buttons with matching glow */
+    #red {
+      background-color: red;
+      box-shadow: 0 0 15px red;
+    }
+
+    #blue {
+      background-color: blue;
+      box-shadow: 0 0 15px blue;
+    }
+
+    #orange {
+      background-color: orange;
+      color: black;
+      box-shadow: 0 0 15px orange;
+    }
+
+    #yellow {
+      background-color: yellow;
+      color: black;
+      box-shadow: 0 0 15px yellow;
+    }
+
+    #green {
+      background-color: green;
+      box-shadow: 0 0 15px green;
+    }
+
+    /*  Hover glow and slight zoom */
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px currentColor;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 7vw;
+      }
+      button {
+        width: 45%;
+        height: 40px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Select any color :</h1>
+  <br>
+  <div id="parent">
+    <button id="red">RED</button>
+    <button id="blue">BLUE</button>
+    <button id="orange">ORANGE</button>
+    <button id="yellow">YELLOW</button>
+    <button id="green">GREEN</button>
+  </div>
+
+  <script src="./first.js"></script>
+</body>
+</html>
